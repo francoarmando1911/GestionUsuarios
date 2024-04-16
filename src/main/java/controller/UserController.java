@@ -9,6 +9,16 @@ import services.UserService;
 @RequestMapping("/usuarios")
 public class UserController {
 
+    @GetMapping("/login")
+    public String showLoginPage() {
+        return "login"; // Devuelve el nombre de la plantilla HTML sin la extensión
+    }
+
+    @GetMapping("/register")
+    public String showRegisterPage() {
+        return "register";
+    }
+
     @Autowired
     private UserService userService;
 
