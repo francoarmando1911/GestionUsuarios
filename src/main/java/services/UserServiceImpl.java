@@ -27,7 +27,7 @@ public class UserServiceImpl implements UserService {
         if (usuarioExistente != null) {
             usuarioExistente.setNombreUsuario(usuario.getNombreUsuario());
             usuarioExistente.setCorreoElectronico(usuario.getCorreoElectronico());
-            // Continúa con otros campos según sea necesario
+
             return userRepository.save(usuarioExistente);
         }
         return null; // Retorna null si no se encuentra el usuario con el ID proporcionado
